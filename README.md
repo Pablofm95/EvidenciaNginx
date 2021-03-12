@@ -1,6 +1,16 @@
 # EvidenciaNginx
 Explicación de los Server Blocks de Nginx
 
+Tenemos un archivo .conf en la ruta /etc/nginx/conf.d, donde se crearán los diferentes server blocks.
+Mediante un include /etc/nginx/conf.d/.conf; podremos cargar la configuración de los server blocks anteriores
+en el archivo de configuración principal de Nginx, es decir, el nginx.conf.
+
+Cada server block permite acceder a un sitio web usando la misma dirección IP. Su funcionamiento es similar a 
+los Virtual Hosts de Apache.
+
+# --> Server Block para el Portfolio.
+Este server block apunta al dominio.
+
 server {                
 	listen 443 ssl http2;
 	listen       [::]:443 ssl http2;
